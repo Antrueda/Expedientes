@@ -83,6 +83,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('expediente.crear') }}">{{ __('Registrar Expedientes') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('area.index') }}">{{ __('Areas') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('estado.index') }}">{{ __('Estados') }}</a>
+                        </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

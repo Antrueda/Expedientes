@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('estados', function (Blueprint $table) {
             $table->id();
             $table->string('nombre')->comment('CAMPO DE TEXTO DEL NOMBRE DEL ESTADO');
-            $table->Integer('i_estado')->comment('CAMPO DE NUMERICO DEL ESTADO');
             $table->timestamps();
         });
     }

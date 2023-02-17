@@ -13,7 +13,6 @@ class Estado extends Model
     protected $fillable = [
         'id',
         'nombre',
-        'i_estado',
         ];
 
 public static function combo($cabecera, $ajaxxxxx)

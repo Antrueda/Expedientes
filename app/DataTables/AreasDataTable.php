@@ -22,8 +22,15 @@ class AreasDataTable extends DataTable
      */
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
-        return (new EloquentDataTable($query))
-            ->addColumn('action', 'areas.action')
+            return (new EloquentDataTable($query))
+            ->addColumn('link', function($test) {
+                return  view('areas\botonesapi', [
+                    'modelox' => $test,
+                ]);
+            }
+        )
+    ->rawColumns(['link'])
+    
             ->setRowId('id');
     }
 
@@ -70,13 +77,13 @@ class AreasDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::computed('action')
+            Column::computed('link')
                   ->exportable(false)
                   ->printable(false)
                   ->width(60)
                   ->addClass('text-center'),
             Column::make('id'),
-            Column::make('add your columns'),
+            Column::make('nombre'),
             Column::make('created_at'),
             Column::make('updated_at'),
         ];
