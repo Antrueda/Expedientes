@@ -15,29 +15,29 @@ class EstadosSeeder extends Seeder
      */
     public function run()
     {
-        Estado::create(["nombreestado"=>"En Archivo Despacho- Radicado a Ruego","i_estado"=>1,]);
-        Estado::create(["nombreestado"=>"En Archivo Despacho a espera de Fotos Valla","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"En notificación a vecinos","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Revisión Área Arquitectura","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Revisión Área Ingenieria","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Revisión Área Jurídica","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Revisión Despacho Curador","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"En Archivo para ingreso documentos aportados","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Acta Observaciones expedida en tiempo de cumplimiento","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"En nueva revisión expediente para verificar cumplimiento observaciones ","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Acto Viable expedido pendiente por pago","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Pagos aportados en proceso Resolución","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Resolución notificada pendiente ejecutoria","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"En proceso sellado planos y memorias","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Acto ejecutoriado en firme","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Resolución de Archivo expedida","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Expediente Archivado por incumplir ruego","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Expendiente Archivado por no aportar fotos valla","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Expediente Archivado por no cumplir Acta Observaciones","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Solicitud de Licencia Negada","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"En resolución de recurso interpuesto","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Expediente en Contabilidad","i_estado"=>1]);
-        Estado::create(["nombreestado"=>"Otro estado","i_estado"=>1]);
+        Estado::create(["nombre"=>"En Archivo Despacho- Radicado a Ruego",]);
+        Estado::create(["nombre"=>"En Archivo Despacho a espera de Fotos Valla",]);
+        Estado::create(["nombre"=>"En notificación a vecinos",]);
+        Estado::create(["nombre"=>"Revisión Área Arquitectura",]);
+        Estado::create(["nombre"=>"Revisión Área Ingenieria",]);
+        Estado::create(["nombre"=>"Revisión Área Jurídica",]);
+        Estado::create(["nombre"=>"Revisión Despacho Curador",]);
+        Estado::create(["nombre"=>"En Archivo para ingreso documentos aportados",]);
+        Estado::create(["nombre"=>"Acta Observaciones expedida en tiempo de cumplimiento",]);
+        Estado::create(["nombre"=>"En nueva revisión expediente para verificar cumplimiento observaciones ",]);
+        Estado::create(["nombre"=>"Acto Viable expedido pendiente por pago",]);
+        Estado::create(["nombre"=>"Pagos aportados en proceso Resolución",]);
+        Estado::create(["nombre"=>"Resolución notificada pendiente ejecutoria",]);
+        Estado::create(["nombre"=>"En proceso sellado planos y memorias",]);
+        Estado::create(["nombre"=>"Acto ejecutoriado en firme",]);
+        Estado::create(["nombre"=>"Resolución de Archivo expedida",]);
+        Estado::create(["nombre"=>"Expediente Archivado por incumplir ruego",]);
+        Estado::create(["nombre"=>"Expendiente Archivado por no aportar fotos valla",]);
+        Estado::create(["nombre"=>"Expediente Archivado por no cumplir Acta Observaciones",]);
+        Estado::create(["nombre"=>"Solicitud de Licencia Negada",]);
+        Estado::create(["nombre"=>"En resolución de recurso interpuesto",]);
+        Estado::create(["nombre"=>"Expediente en Contabilidad",]);
+        Estado::create(["nombre"=>"Otro estado",]);
 
 
     }

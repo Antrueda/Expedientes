@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('area_usuarios', function (Blueprint $table) {
+        Schema::create('solicitantes', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->unsigned()->comment('CAMPO DE ID DEL USUARIO');
-            $table->bigInteger('area_id')->unsigned()->comment('CAMPO DE ID DEL AREA');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('area_id')->references('id')->on('areas');
             $table->timestamps();
         });
     }
@@ -30,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('area_usuarios');
+        Schema::dropIfExists('solicitantes');
     }
 };
