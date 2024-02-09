@@ -405,6 +405,9 @@ svg {
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('expediente.crear') }}">{{ __('Registrar Expedientes') }}</a>
+                                </li>
                             @endif
 
                             @if (Route::has('register'))
@@ -413,21 +416,21 @@ svg {
                                 </li>
                             @endif
                         @else
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('users.index') }}">{{ __('Usuarios') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('expediente.index') }}">{{ __('Consultar Expedientes') }}</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('expediente.crear') }}">{{ __('Registrar Expedientes') }}</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('area.index') }}">{{ __('Areas') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('estado.index') }}">{{ __('Estados') }}</a>
-                        </li>
+                        </li> --}}
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

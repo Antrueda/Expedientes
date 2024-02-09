@@ -225,7 +225,7 @@
         }
 
         .btn-step{
-            background-color: var(--prm-color);
+            background-color: #0a5b42;
             color: #fff;
         }
 
@@ -272,11 +272,11 @@
         <div class="steps-form">
             <div class="steps-row setup-panel">
               <div class="steps-step">
-                <a href="#step-1" type="button" data-bs-toggle="tooltip" data-bs-title="DATOS DEL SOLICITANTE"  class="btn btn-step btn-circle" id = "step-1"><span id="text-1"><b>1</b></span><i id="stepi-1" class="fas fa-check" style="display:none;"></i></a>
+                <a href="#step-1" type="button" data-bs-toggle="tooltip" data-bs-title="IDENTIFICACIÓN DE LA SOLICITUD"  class="btn btn-step btn-circle" id = "step-1"><span id="text-1"><b>1</b></span><i id="stepi-1" class="fas fa-check" style="display:none;"></i></a>
             
               </div>
               <div class="steps-step">
-                <a href="#step-2" type="button" data-bs-toggle="tooltip" data-bs-title="DATOS DEL APODERADO" class="btn btn-light btn-circle" id = "step-2" disabled="disabled"><span id="text-2"><b>2</b></span><i id="stepi-2" class="fas fa-check" style="display:none;"></i></a>
+                <a href="#step-2" type="button" data-bs-toggle="tooltip" data-bs-title="INFORMACIÓN SOBRE EL PREDIO" class="btn btn-light btn-circle" id = "step-2" disabled="disabled"><span id="text-2"><b>2</b></span><i id="stepi-2" class="fas fa-check" style="display:none;"></i></a>
       
               </div>
               <div class="steps-step">
@@ -287,12 +287,20 @@
                 <a href="#step-4" type="button" data-bs-toggle="tooltip" data-bs-title="DATOS DE CONCILIACIÓN" class="btn btn-light btn-circle" id = "step-4" disabled="disabled"><span id="text-4"><b>4</b></span><i id="stepi-4" class="fas fa-check" style="display:none;"></i></a>
              
               </div>
+              <div class="steps-step">
+                <a href="#step-5" type="button" data-bs-toggle="tooltip" data-bs-title="DATOS DE CONCILIACIÓN" class="btn btn-light btn-circle" id = "step-5" disabled="disabled"><span id="text-4"><b>5</b></span><i id="stepi-5" class="fas fa-check" style="display:none;"></i></a>
+             
+              </div>
+              <div class="steps-step">
+                <a href="#step-6" type="button" data-bs-toggle="tooltip" data-bs-title="DATOS DE CONCILIACIÓN" class="btn btn-light btn-circle" id = "step-6" disabled="disabled"><span id="text-4"><b>6</b></span><i id="stepi-6" class="fas fa-check" style="display:none;"></i></a>
+             
+              </div>
             </div>
             
     
           </div>
           <div class="progress">
-            <div class="progress-bar bg-primary" role="progressbar" id="progressbar" style="width: 12%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-primary" role="progressbar" id="progressbar" style="width: 9%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         
           <br>   <br>
@@ -396,7 +404,7 @@
                 </div>
                      <div class="col-md-3">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control form-control-sm validate" id="direccion" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" name="direccion" autocomplete="off" onkeypress = "return soloNumeros(event);" required placeholder="0" minlength="4" maxlength="10" pattern="[0-9]+" >
+                                                <input type="text" class="form-control form-control-sm validate" id="direccion" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" name="direccion" autocomplete="off" onkeypress = "return soloNumeros(event);" required placeholder="0" minlength="4" maxlength="10" pattern="[0-9]+" >
                                                 <label for="direccion">Dirección</label>
                                                 <div class="invalid-feedback direccion">
                                                     Campo obligatorio.
@@ -510,55 +518,55 @@
 
              
          <div class="card tab" id="tab-2">
-            <div class="card-header">INFORMACIÓN SOBRE EL PREDIO</div>
+            <div class="card-header">2.INFORMACIÓN SOBRE EL PREDIO</div>
                  <div class="card-body">
                     {{-- Step 2 --}}
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-floating mb-3">
-                  
-                                {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                                <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
-                                <div class="invalid-feedback estrato">
+                                <input type="text" class="form-control form-control-sm validate" id="direccion" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" name="direccion" autocomplete="off" onkeypress = "return soloNumeros(event);" required placeholder="0" minlength="4" maxlength="10" pattern="[0-9]+" >
+                                <label for="direccionact">2.1 Dirección O Nomenclatura Actual</label>
+                                <div class="invalid-feedback direccion">
                                     Campo obligatorio.
                                   </div>
-                                </div>
-                            </div> 
+             
+                              </div>
+                            </div>
                             <div class="col-md-3">
                                 <div class="form-floating mb-3">
-                      
-                                    {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                                    <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
-                                    <div class="invalid-feedback estrato">
+                                    <input type="text" class="form-control form-control-sm validate" id="direccion" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" name="direccion" autocomplete="off" onkeypress = "return soloNumeros(event);" required placeholder="0" minlength="4" maxlength="10" pattern="[0-9]+" >
+                                    <label for="direccionact">Dirección O Nomenclatura Anterior(es)</label>
+                                    <div class="invalid-feedback direccion">
                                         Campo obligatorio.
                                       </div>
-                                    </div>
-                                </div> 
+                 
+                                  </div>
+                                </div>
                                 <div class="col-md-3">
                                     <div class="form-floating mb-3">
-                          
-                                        {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                                        <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
-                                        <div class="invalid-feedback estrato">
+                                        <input type="text" class="form-control form-control-sm validate" id="direccion" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" name="direccion" autocomplete="off" onkeypress = "return soloNumeros(event);" required placeholder="0" minlength="4" maxlength="10" pattern="[0-9]+" >
+                                        <label for="direccionact">2.2 No. Matrícula Inmobiliaria</label>
+                                        <div class="invalid-feedback direccion">
                                             Campo obligatorio.
                                           </div>
-                                        </div>
-                                    </div> 
+                     
+                                      </div>
+                                    </div>
                                     <div class="col-md-3">
                                         <div class="form-floating mb-3">
-                              
-                                            {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                                            <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
-                                            <div class="invalid-feedback estrato">
+                                            <input type="text" class="form-control form-control-sm validate" id="direccion" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" name="direccion" autocomplete="off" onkeypress = "return soloNumeros(event);" required placeholder="0" minlength="4" maxlength="10" pattern="[0-9]+" >
+                                            <label for="direccionact">2.3 No. Identificación Catastral</label>
+                                            <div class="invalid-feedback direccion">
                                                 Campo obligatorio.
                                               </div>
-                                            </div>
-                                        </div> 
+                         
+                                          </div>
+                                        </div>
                                         <div class="col-md-3">
                                             <div class="form-floating mb-3">
                                   
                                                 {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                                                <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
+                                                <label for="estrato"> 2.4 Clasificación del Suelo</label>
                                                 <div class="invalid-feedback estrato">
                                                     Campo obligatorio.
                                                   </div>
@@ -566,9 +574,8 @@
                                             </div> 
                       <div class="col-md-3">
                             <div class="form-floating mb-3">
-                  
                                 {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                                <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
+                                <label for="estrato"> 2.5 Planimetría Del Lote *</label>
                                 <div class="invalid-feedback estrato">
                                     Campo obligatorio.
                                   </div>
@@ -578,7 +585,7 @@
                                 <div class="form-floating mb-3">
                       
                                     {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                                    <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
+                                    <label for="estrato"> 2.6a Barrio O Urbanicación</label>
                                     <div class="invalid-feedback estrato">
                                         Campo obligatorio.
                                       </div>
@@ -588,7 +595,7 @@
                 <div class="form-floating mb-3">
       
                     {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                    <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
+                    <label for="estrato"> 2.6b. Vereda *</label>
                     <div class="invalid-feedback estrato">
                         Campo obligatorio.
                       </div>
@@ -598,7 +605,7 @@
                 <div class="form-floating mb-3">
       
                     {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                    <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
+                    <label for="estrato"> 2.6b Comuna *</label>
                     <div class="invalid-feedback estrato">
                         Campo obligatorio.
                       </div>
@@ -608,7 +615,7 @@
                 <div class="form-floating mb-3">
       
                     {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                    <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
+                    <label for="estrato"> 2.6b Sector *</label>
                     <div class="invalid-feedback estrato">
                         Campo obligatorio.
                       </div>
@@ -618,7 +625,7 @@
                 <div class="form-floating mb-3">
       
                     {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                    <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
+                    <label for="estrato"> 2.6b Estrato *</label>
                     <div class="invalid-feedback estrato">
                         Campo obligatorio.
                       </div>
@@ -628,7 +635,7 @@
                 <div class="form-floating mb-3">
       
                     {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                    <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
+                    <label for="estrato"> 2.6b Corregimiento *</label>
                     <div class="invalid-feedback estrato">
                         Campo obligatorio.
                       </div>
@@ -638,7 +645,7 @@
                 <div class="form-floating mb-3">
       
                     {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                    <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
+                    <label for="estrato"> 2.6b Manzana *</label>
                     <div class="invalid-feedback estrato">
                         Campo obligatorio.
                       </div>
@@ -648,7 +655,7 @@
                 <div class="form-floating mb-3">
       
                     {{ Form::select('estrato', $todoxxxx['estadox'], null, ['class' => $errors->first('estrato') ? 'form-control form-control-sm is-invalid validate' : 'form-control form-control-sm validate','name'=>'estrato','id'=>'estrato','placeholder'=>'- Seleccione Dato -']) }}
-                    <label for="estrato"> 1.9 Bien de Interes Cultural *</label>
+                    <label for="estrato"> 2.6b LOTE No. *</label>
                     <div class="invalid-feedback estrato">
                         Campo obligatorio.
                       </div>
@@ -663,6 +670,7 @@
                      </div>
                  
                 </div>
+                <br>
             </div>
 
 
@@ -742,6 +750,7 @@
                      </div>
                  
                 </div>
+                <br>
                 </div>
             </div>
 
@@ -818,6 +827,14 @@
                 
                           
                          </div>
+                         <div class="row justify-content-md-center" style="padding-top: 3px">
+                            <div id="apode_id" class="col-2">
+                            <div class="btn btn-success pt-2" onclick="run(4, 5);"  > Siguiente  <i class="far fa-check-circle ms-2" ></i> </div>
+                            
+                             </div>
+                         
+                        </div>
+                        <br>
                 </div>
             </div>
 
@@ -834,8 +851,8 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-floating mb-3">
-                                    <input type="text" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="linderos" id="linderos" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
-                                        <label for="linderos">Nombre</label>
+                                    <input type="text" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="nomtit" id="nomtit" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
+                                        <label for="nomtit">Nombre</label>
                                         <div class="invalid-feedback linderos">
                                             Campo obligatorio.
                                           </div>
@@ -843,8 +860,8 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-floating mb-3">
-                                    <input type="number" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="longitud" id="longitud" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
-                                        <label for="longitud">Cedula</label>
+                                    <input type="number" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="cedutit" id="cedutit" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
+                                        <label for="cedutit">Cedula</label>
                                         <div class="invalid-feedback longitud">
                                             Campo obligatorio.
                                           </div>
@@ -852,8 +869,8 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-floating mb-3">
-                                    <input type="number" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="colinda" id="colinda" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
-                                        <label for="colinda">Teléfono</label>
+                                    <input type="number" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="teleftitu" id="teleftitu" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
+                                        <label for="teleftitu">Teléfono</label>
                                         <div class="invalid-feedback colinda">
                                             Campo obligatorio.
                                           </div>
@@ -905,6 +922,20 @@
             
                       
                      </div>
+                    </div>
+                    <div class="row justify-content-md-center" style="padding-top: 3px">
+                        <div id="apode_id" class="col-2">
+                        <div class="btn btn-success pt-2" onclick="run(5, 6);"  > Siguiente  <i class="far fa-check-circle ms-2" ></i> </div>
+                        
+                         </div>
+                     
+                    </div>
+                    <br>
+                </div>
+            </div>
+                     <div class="card tab" id="tab-6">
+                        <div class="card-header">5.2 PROFESIONALES RESPONSABLES</div>
+                             <div class="card-body">
                                <div class="row">
                         <div class="card-body" style="margin-bottom: 10px; height">
                             <p class="text-justify">Si es un numero plural de convocados indique los correos electrónicos de cada uno de ellos. Se advierte que la invitación a la audiencia de conciliación virtual se realizará por correo electrónico, y por tanto deben ser verídicos. <b><u>Si no cuenta con ellos, adelante la solicitud de conciliación presencial en la Sedes de Conciliación del Personería de Bogotá D.C</u> </b>. que se encuentra publicadas en la página web de la Entidad.</p>
@@ -913,36 +944,54 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-floating mb-3">
-                                    <input type="text" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="linderos" id="linderos" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
-                                        <label for="linderos">Nombre</label>
-                                        <div class="invalid-feedback linderos">
+                                    <input type="text" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="nomprof" id="nomprof" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
+                                        <label for="nomprof">Nombre</label>
+                                        <div class="invalid-feedback nomprof">
                                             Campo obligatorio.
                                           </div>
                                 </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-floating mb-3">
-                                    <input type="text" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="longitud" id="longitud" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
-                                        <label for="longitud">Cedula</label>
-                                        <div class="invalid-feedback longitud">
+                                    <input type="text" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="cedprof" id="cedprof" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
+                                        <label for="cedprof">Cedula</label>
+                                        <div class="invalid-feedback cedprof">
                                             Campo obligatorio.
                                           </div>
                                 </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-floating mb-3">
-                                    <input type="text" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="colinda" id="colinda" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
-                                        <label for="colinda">Teléfono</label>
-                                        <div class="invalid-feedback colinda">
+                                    <input type="text" class="form-control form-control-sm" onkeyup="this.value=this.value.toUpperCase();"  onpaste="return false;" style="text-transform: uppercase" name="teleprofe" id="teleprofe" autocomplete="off" placeholder="0" minlength="3" maxlength="200" >
+                                        <label for="teleprofe">Teléfono</label>
+                                        <div class="invalid-feedback teleprofe">
                                             Campo obligatorio.
                                           </div>
                                 </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-floating mb-3">
-                                        <input type="email" class="form-control form-control-sm" name="emailConvo" style="text-transform: lowercase" id="emailConvo" autocomplete="off" onpaste="return false;" placeholder="0" minlength="3" maxlength="50" >
-                                        <label for="colinda">Email</label>
-                                        <div class="invalid-feedback colinda">
+                                        <input type="email" class="form-control form-control-sm" name="emailpro" style="text-transform: lowercase" id="emailpro" autocomplete="off" onpaste="return false;" placeholder="0" minlength="3" maxlength="50" >
+                                        <label for="emailpro">Email</label>
+                                        <div class="invalid-feedback emailpro">
+                                            Campo obligatorio.
+                                          </div>
+                                </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control form-control-sm" name="nummatri" style="text-transform: lowercase" id="nummatri" autocomplete="off" onpaste="return false;" placeholder="0" minlength="3" maxlength="50" >
+                                        <label for="nummatri">No. Matricula Profesional</label>
+                                        <div class="invalid-feedback nummatri">
+                                            Campo obligatorio.
+                                          </div>
+                                </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-floating mb-3">
+                                        <input type="date" class="form-control form-control-sm" name="fechamatri" style="text-transform: lowercase" id="fechamatri" autocomplete="off" onpaste="return false;" placeholder="0" minlength="3" maxlength="50" >
+                                        <label for="fechamatri">Fecha Exp. Matricula</label>
+                                        <div class="invalid-feedback fechamatri">
                                             Campo obligatorio.
                                           </div>
                                 </div>
@@ -954,7 +1003,7 @@
                                 
                                 <div class="col-md-3">
                                      
-                               <button type="button" class="btn btn-success pt-2" id="add3_btn" >Agregar <i class="fa-solid fa-user-plus"></i></button> 
+                               <button type="button" class="btn btn-success pt-2" id="add4_btn" >Agregar <i class="fa-solid fa-user-plus"></i></button> 
                                 
                 
                   
@@ -971,10 +1020,12 @@
                                     <th>CEDULA</th>
                                     <th>TELÉFONO</th>
                                     <th>EMAIL</th>
+                                    <th># MATRÍCULA</th>
+                                    <th>FECHA EXP. MATRÍCULA</th>
                                     <th></th>
                                   </tr>
                                 </thead>
-                                <tbody id="tabltitu"></tbody>
+                                <tbody id="tablprof"></tbody>
                               </table>
                             </div>
                             </div>
@@ -987,8 +1038,8 @@
                     
 
                     <div class="row justify-content-md-center" style="padding-top: 3px">
-                        <div class="col-md-4" style="align-content: center;">
-                          {{ Form::submit('Registrar', ['class' => 'btn btn-primary' ]) }}
+                        <div class="col-md-2" style="align-content: center;">
+                          {{ Form::submit('Registrar', ['class' => 'btn btn-success' ]) }}
                         </div>
                 
                       </div>
@@ -1021,8 +1072,8 @@ function soloNumeros(e) {
         return /\d/.test(String.fromCharCode(keynum));
     }
 
-// $(".tab").css("display", "none");
-// $("#tab-1").css("display", "block");
+$(".tab").css("display", "none");
+$("#tab-1").css("display", "block");
 function run(hideTab, showTab){
     let valid = true ;
         if(hideTab < showTab){ // If not press previous button
@@ -1072,52 +1123,41 @@ function run(hideTab, showTab){
                     }          
                   }
    
-                  for (i = 0; i < z.length; i++){
+                //   for (i = 0; i < z.length; i++){
                     
-                    var nombre= z[i].id;
-                    if (z[i].value == ""||$(z[i]).val().length < z[i].minLength){
+                //     var nombre= z[i].id;
+                //     if (z[i].value == ""||$(z[i]).val().length < z[i].minLength){
                         
-                     //   $(y[i]).css("border-color", "rgb(235 16 16)");
-                        $(z[i]).css("background", "#ffdddd");
-                        //$(z[i]).parents(".input-file").find('input').val('');
-                        console.log( $(z[i]));
+                //      //   $(y[i]).css("border-color", "rgb(235 16 16)");
+                //         $(z[i]).css("background", "#ffdddd");
+                //         //$(z[i]).parents(".input-file").find('input').val('');
+                //         console.log( $(z[i]));
                   
-                        var cerca =$(z[i]).next(".form-control.form-control-sm.selectize.selectize-control.single")
-                        //form-control form-control-sm selectize selectize-control single
-                        console.log(cerca);
-                        $(cerca).css("background", "#ffdddd");
-                        console.log(z[i].value);
-                        nombre= nombre.replace('[]','')
+                //         var cerca =$(z[i]).next(".form-control.form-control-sm.selectize.selectize-control.single")
+                //         //form-control form-control-sm selectize selectize-control single
+                //         console.log(cerca);
+                //         $(cerca).css("background", "#ffdddd");
+                //         console.log(z[i].value);
+                //         nombre= nombre.replace('[]','')
                  
-                        $('.invalid-feedback.'+nombre).show();
-                        valid =false;
-                    }else{
-                        console.log(z[i].name);
-                        var nombre= z[i].name;
-                        var cerca =$(z[i]).next(".form-control.form-control-sm.selectize.selectize-control.single")
+                //         $('.invalid-feedback.'+nombre).show();
+                //         valid =false;
+                //     }else{
+                //         console.log(z[i].name);
+                //         var nombre= z[i].name;
+                //         var cerca =$(z[i]).next(".form-control.form-control-sm.selectize.selectize-control.single")
                        
-                        $(cerca).css("background", "transparent");
+                //         $(cerca).css("background", "transparent");
                         
-                        $('.invalid-feedback.'+nombre).hide();
-                    }          
-                  }
+                //         $('.invalid-feedback.'+nombre).hide();
+                //     }          
+                //   }
 
 
         }
 
         // Progress bar
-        for (i = 1; i < showTab; i++){
-          if($("#tipoSolicitud").val()===0){
-            $("#step-2").hide();
-          }else{
-            $("#step-2").show();
-            $("#step-2").removeClass('btn-light');
-            $("#step-2").addClass('btn-step');
-          }
-           $("#step-"+i).addClass("opacity", "1");
-          console.log(i)
-          
-        }
+
         if (valid) {
         // Lógica para avanzar al siguiente paso (puede ser cambio de clases, visibilidad, etc.)
         if (hideTab==1){
@@ -1159,20 +1199,38 @@ function run(hideTab, showTab){
         $("#step-"+showTab).removeClass('btn-light');
         $("#step-"+showTab).addClass('btn-step');
         //$("input").css("background", "#fff");
+        for (i = 1; i < showTab; i++){
+          if($("#tipoSolicitud").val()===0){
+            $("#step-2").hide();
+          }else{
+            $("#step-2").show();
+            $("#step-2").removeClass('btn-light');
+            $("#step-2").addClass('btn-step');
+          }
+           $("#step-"+i).addClass("opacity", "1");
+          console.log(i)
+          
         }
         if(showTab===1){
-            $("#progressbar").css("width", "12%");
+            $("#progressbar").css("width", "10%");
         }else
         if(showTab===2){
-            $("#progressbar").css("width", "39%");
+            $("#progressbar").css("width", "25%");
         }else
         if(showTab===3){
-            $("#progressbar").css("width", "63.5%");
-        }else{
-            $("#progressbar").css("width", "89%");
+            $("#progressbar").css("width", "40%");
+        }else
+        if(showTab===4){
+            $("#progressbar").css("width", "60%");
 
+        }else
+        if(showTab===5){
+            $("#progressbar").css("width", "75%");
+        }else{
+        $("#progressbar").css("width", "92%");
+     }
         }
-    
+
 }
 
 $('#add_btn').on('click',function(){
@@ -1225,7 +1283,64 @@ $('#add2_btn').on('click',function(){
 
         });
 
+        
+        $('#add3_btn').on('click',function(){
+    var nomtitular= $("#nomtit").val() ;
+    var cedutitular= $("#cedutit").val() ;
+    var teleftitular= $("#teleftitu").val();
+    var emailtitular= $("#emailtitu").val();
+    
+    var html='';
+     html+=' <tr>';
+     html+='<td style="text-transform: uppercase"><input type="text" class="form-control form-control-sm" name="nomtitular[]" id="nomtitular" value="'+nomtitular+'" style="display:none;" >'+nomtitular+'</td>';
+     html+='<td style="text-transform: uppercase"><input type="text" class="form-control form-control-sm" name="cedutitular[]" id="cedutitular" value="'+cedutitular+'" style="display:none;" >'+cedutitular+'</td>';
+     html+='<td style="text-transform: uppercase"><input type="text" class="form-control form-control-sm" name="cedutitular[]" id="cedutitular" value="'+cedutitular+'" style="display:none;" >'+cedutitular+'</td>';
+     html+='<td style="text-transform: uppercase"><input type="text" class="form-control form-control-sm" name="emailtitu[]" id="emailtitu" value="'+emailtitu+'" style="display:none;" >'+emailtitu+'</td>';
+     html+='<td> <button type="button" id="deletebtn2" class="btn btn btn-outline-danger deletebtn2">Eliminar <i class="far fa-times-circle"></i></button> </td>';
+     html+='</tr>';
 
+
+     $('#tabltitu').append(html);
+     
+     
+    });
+    $(document).on('click','#deletebtn2',function(){
+            console.log('test');
+            $(this).closest('tr').remove();
+
+
+        });
+
+        $('#add4_btn').on('click',function(){
+    var nomprofe= $("#nomprof").val() ;
+    var cedprofe= $("#cedprof").val() ;
+    var teleprof= $("#teleprofe").val();
+    var emailprof= $("#emailpro").val();
+    var nummatrif= $("#nummatri").val();
+    var fechamatrif= $("#fechamatri").val();
+    
+    var html='';
+     html+=' <tr>';
+     html+='<td style="text-transform: uppercase"><input type="text" class="form-control form-control-sm" name="nomprofe[]" id="nomprofe" value="'+nomprofe+'" style="display:none;" >'+nomprofe+'</td>';
+     html+='<td style="text-transform: uppercase"><input type="text" class="form-control form-control-sm" name="cedprofe[]" id="cedprofe" value="'+cedprofe+'" style="display:none;" >'+cedprofe+'</td>';
+     html+='<td style="text-transform: uppercase"><input type="text" class="form-control form-control-sm" name="teleprof[]" id="teleprof" value="'+teleprof+'" style="display:none;" >'+teleprof+'</td>';
+     html+='<td style="text-transform: uppercase"><input type="text" class="form-control form-control-sm" name="emailprof[]" id="emailprof" value="'+emailprof+'" style="display:none;" >'+emailprof+'</td>';
+     html+='<td style="text-transform: uppercase"><input type="text" class="form-control form-control-sm" name="nummatrif[]" id="nummatrif" value="'+nummatrif+'" style="display:none;" >'+nummatrif+'</td>';
+     html+='<td style="text-transform: uppercase"><input type="text" class="form-control form-control-sm" name="fechamatrif[]" id="fechamatrif" value="'+fechamatrif+'" style="display:none;" >'+fechamatrif+'</td>';
+     html+='<td> <button type="button" id="deletebtn2" class="btn btn btn-outline-danger deletebtn2">Eliminar <i class="far fa-times-circle"></i></button> </td>';
+     html+='</tr>';
+
+
+     $('#tablprof').append(html);
+     
+     
+    });
+    $(document).on('click','#deletebtn2',function(){
+            console.log('test');
+            $(this).closest('tr').remove();
+
+
+        });
    
 </script>
  
